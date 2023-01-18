@@ -1,0 +1,188 @@
+/* .login {
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    background-image: url('../home/img/background.jpg');
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    /* background-position: center;
+    background-size: cover;
+    position: absolute;
+  }
+
+  .formItems{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lContainer{
+    width: 90%;
+    max-width: 450px;
+    height: 480px;
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background: white;
+   padding: 50px 60px 70px;
+   text-align: center;
+   display: flex;
+    flex-direction: column;
+ 
+ 
+  }
+
+.lContainer h1{
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: green;
+  position: relative;
+}
+
+.lContainer h1::after{
+  content: '';
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: green;
+  position: absolute;
+  bottom: -12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.inputField{
+  background: grey;
+  margin: 15px px ;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+
+}
+
+input{
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+
+} */
+
+  /* .buttonBox{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px  blue;
+    border-radius: 30px;
+  }
+
+  .tggleBtn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position:relative;
+  }
+
+  #btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: fit-content;
+    background: blue;
+    border-radius: 30px;
+    transition: .5s;
+  }
+  
+  .lInput{
+    height: 30px;
+    padding: 10px;
+  }
+  
+  .lButton {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .lButton:disabled{
+    background-color: #0071c28c;
+    cursor: not-allowed;
+  } */ 
+
+  .login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../home/img/background.jpg');
+  }
+  
+  .lContainer {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+  }
+  
+  .signTitle{
+    color: #0071c2;
+    margin: 30px 200px;  
+   }
+
+   .joinTitle{
+      color: #0071c2;
+      margin: 30px 140px;  
+   }
+
+   .error{
+    color: red;
+    margin: 30px 100px; 
+ }
+   
+  .lInput{
+    height: 30px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .lButton {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 50px;
+  }
+  
+  .lButton:disabled{
+    background-color: #0071c28c;
+    cursor: not-allowed;
+  }
+
+  .sign{
+    background: none;
+    color: inherit;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+  }

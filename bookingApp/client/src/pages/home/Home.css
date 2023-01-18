@@ -1,0 +1,57 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    margin: 0;
+    background-image:url('./img/background.jpg');
+    background-size:cover;
+    position: relative;
+ 
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.title{
+    font-size: 50px;
+    margin-top: 200px;
+    font-weight: bold;
+    color: rgb(1, 1, 56);
+    background-color: aqua;
+}
+
+.p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.btn{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid;
+    background: transparent;
+    background-color: aqua;
+    
+}
+
+:hover.btn{
+    background-color: blue;
+}
