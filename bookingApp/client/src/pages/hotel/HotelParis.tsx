@@ -10,8 +10,10 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HotelParis = () => {
+  const navigate = useNavigate();
 const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
 
@@ -85,7 +87,9 @@ const [slideNumber, setSlideNumber] = useState(0);
           <h1 className="hotelTitle">Pullman Paris Tour Eiffel</h1>
           <div className="hotelAddress">
             <FontAwesomeIcon icon={faLocationDot} />
-            <span>eiffel tower paris</span>
+            <span>eiffel tower paris 
+            <button onClick={()=> navigate(`/navigation/paris`)} className="hotelPriceHighlightBtn">show on google map</button>
+            </span>
           </div>
           <span className="hotelDistance">
             Excellent location – 500m from center

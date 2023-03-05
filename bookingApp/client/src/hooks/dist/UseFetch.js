@@ -47,7 +47,7 @@ var useFetch = function (url) {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, axios_1["default"].get('/hotels')];
+                        return [4 /*yield*/, axios_1["default"].post(url)];
                     case 1:
                         res = _a.sent();
                         setData(res.data);
@@ -61,14 +61,14 @@ var useFetch = function (url) {
             });
         }); };
         fetchData();
-    }, ['hotels']);
+    }, [url]);
     var reFetch = function () { return __awaiter(void 0, void 0, void 0, function () {
         var res, err_2;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, axios_1["default"].get('/hotels')];
+                    return [4 /*yield*/, axios_1["default"].post(url)];
                 case 1:
                     res = _a.sent();
                     setData(res.data);

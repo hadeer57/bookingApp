@@ -2,6 +2,7 @@ import React from "react";
 import Feature from "../../components/feature/Feature";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
+import SearchItemParis from "../../components/serachItem/SearchItemParis";
 import"../booking/Booking.css";
 
 const Booking = () =>{

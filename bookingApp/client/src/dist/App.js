@@ -8,8 +8,10 @@ var List_1 = require("./pages/list/List");
 var Login_1 = require("./pages/login/Login");
 var Register_1 = require("./pages/register/Register");
 var GoogleMapParis_1 = require("./pages/googleMap/GoogleMapParis");
-var HotelParis_1 = require("./pages/hotel/HotelParis");
 var AnimationPage_1 = require("./pages/animationPage/AnimationPage");
+var Hotel_1 = require("./pages/hotel/Hotel");
+var HotelParis_1 = require("./pages/hotel/HotelParis");
+// import HotelParis from "./pages/hotel/HotelParis";
 function App() {
     return (react_1["default"].createElement(react_router_dom_1.BrowserRouter, null,
         react_1["default"].createElement("div", null,
@@ -17,6 +19,7 @@ function App() {
                 react_1["default"].createElement(react_router_dom_1.Route, { path: "/", element: react_1["default"].createElement(Home_1["default"], null) }),
                 react_1["default"].createElement(react_router_dom_1.Route, { path: "/booking", element: react_1["default"].createElement(Booking_1["default"], null) }),
                 react_1["default"].createElement(react_router_dom_1.Route, { path: "/hotels", element: react_1["default"].createElement(List_1["default"], null) }),
+                react_1["default"].createElement(react_router_dom_1.Route, { path: "/hotels/:id", element: react_1["default"].createElement(Hotel_1["default"], null) }),
                 react_1["default"].createElement(react_router_dom_1.Route, { path: "/hotels/paris", element: react_1["default"].createElement(HotelParis_1["default"], null) }),
                 react_1["default"].createElement(react_router_dom_1.Route, { path: "/login", element: react_1["default"].createElement(Login_1["default"], null) }),
                 react_1["default"].createElement(react_router_dom_1.Route, { path: "/register", element: react_1["default"].createElement(Register_1["default"], null) }),

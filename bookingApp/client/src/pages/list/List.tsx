@@ -10,17 +10,6 @@ import useFetch from "../../hooks/UseFetch"
 import axios from "axios";
 import SearchItemParis from "../../components/serachItem/SearchItemParis";
 
-// const getHotelFromServer = async () => {
-//     const { data } = await axios.get('/hotels')
-//     SearchItem(data)
-//   }
-
-// const [hotelData, setHotelData] = useState([]);
-
-
-  
-
-
 const List = () =>{
     const navigate = useNavigate();
 
@@ -37,12 +26,14 @@ const List = () =>{
 
     // useEffect(()=>{
     //     (async ()=>{
-    //         const { data } = await axios.post('/hotels', {destination})
+    //         const { data } = await axios.post(`/hotels?city={destination}`)
     //         console.log(data)
     //         const {success, hotels}=data
     //         setHotels(hotels)
     //     })()
     // },[destination])
+
+  
 
     //   const getHotelFromServer = async (ev: any) => {
     //     ev.preventDefault()
@@ -51,8 +42,10 @@ const List = () =>{
     //     setDestination(destinationFromForm)
     //     }
 
+    
+
     const { data,reFetch } = useFetch(
-        `/hotels?city=${destination}`
+        `/hotels/getbycity?city=${destination}`
       );
     
       const handleClick = () => {
@@ -104,13 +97,11 @@ const List = () =>{
                     <button type="submit">Search</button>
                 </div>
                 <div className="listResult">
-              
-                {/* hotels.map((item)=> (
-                    <SearchItem  item={item} />
-                    )) */}      
-
-                    <SearchItemParis/>      
-             
+                    {
+                        data.map(item=>(
+                            <SearchItem item={item} />
+                        ))
+                    }
               </div>
 
               </div>

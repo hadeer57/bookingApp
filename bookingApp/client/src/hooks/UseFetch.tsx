@@ -9,18 +9,18 @@ const useFetch = (url:any) => {
     const fetchData = async () => {
      
       try {
-        const res = await axios.get('/hotels');
+        const res = await axios.post(url);
         setData(res.data);
       } catch (err) {
         console.error();
         
       }    };
     fetchData();
-  }, ['hotels']);
+  }, [url]);
 
   const reFetch = async () => {
     try {
-      const res = await axios.get('/hotels');
+      const res = await axios.post(url);
       setData(res.data);
     } catch (err) {
 console.error();

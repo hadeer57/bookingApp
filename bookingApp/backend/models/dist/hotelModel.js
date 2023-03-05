@@ -10,10 +10,17 @@ var HotelSchema = new mongoose_1["default"].Schema({
         type: String,
         required: true
     },
-    location: {
-        country: { type: String, required: true },
-        city: { type: String, required: true },
-        adress: { type: String, required: true }
+    country: {
+        type: String,
+        required: true
+    },
+    city: {
+        type: String,
+        required: true
+    },
+    address: {
+        type: String,
+        required: true
     },
     distanceFromCenter: {
         type: String,

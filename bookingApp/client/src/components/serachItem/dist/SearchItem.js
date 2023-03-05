@@ -7,7 +7,7 @@ var SearchItem = function (_a) {
     var item = _a.item;
     var navigate = react_router_dom_1.useNavigate();
     return (react_1["default"].createElement("div", { className: "searchItem" },
-        react_1["default"].createElement("img", { src: "", alt: "", className: "siImg" }),
+        react_1["default"].createElement("img", { src: item.images[0], alt: "", className: "siImg" }),
         react_1["default"].createElement("div", { className: "siDesc" },
             react_1["default"].createElement("h1", { className: "siTitle" }, item.name),
             react_1["default"].createElement("span", { className: "siDistance" },
@@ -27,6 +27,6 @@ var SearchItem = function (_a) {
                     "$",
                     item.cheapestPrice),
                 react_1["default"].createElement("span", { className: "siTaxOp" }, "Includes taxes and fees"),
-                react_1["default"].createElement("button", { onClick: function () { return navigate("./hotels/" + item._id); }, className: "siCheckButton" }, "See availability")))));
+                react_1["default"].createElement("button", { onClick: function () { return navigate("/hotels/" + item._id); }, className: "siCheckButton" }, "See availability")))));
 };
 exports["default"] = SearchItem;

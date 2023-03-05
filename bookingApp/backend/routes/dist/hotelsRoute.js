@@ -14,6 +14,6 @@ router["delete"]("/delete-hotel/:id", verify_1.isAdmin, hotelsCont_1.deleteHotel
 router.post("/get-hotel/:id", hotelsCont_1.findHotel);
 //GetAll
 router.post("/", hotelsCont_1.findAllHotels);
-//GetHotelByCity
-router.post("/:city", hotelsCont_1.findHotelsByCity);
+//GetByCity
+router.post("/getbycity", hotelsCont_1.findHotelsByCity);
 exports["default"] = router;

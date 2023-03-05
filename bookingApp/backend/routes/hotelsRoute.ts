@@ -20,8 +20,10 @@ router.post("/get-hotel/:id", findHotel)
 //GetAll
 router.post("/", findAllHotels)
 
-//GetHotelByCity
-router.post("/:city", findHotelsByCity)
+//GetByCity
+router.post("/getbycity", findHotelsByCity)
+
+
 
 
 

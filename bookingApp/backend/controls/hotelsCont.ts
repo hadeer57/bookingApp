@@ -45,7 +45,7 @@ export async function findHotel(req: any, res: any) {
   try {
 
     const findHotelDB = await HotelModel.findById(req.params.id);
-    res.send({ success: true, findHotelDB });
+    res.send( findHotelDB);
   }
 
   catch (error) {
@@ -62,14 +62,17 @@ export async function findAllHotels(req: any, res: any) {
   }
 }
 
-export async function findHotelsByCity(req: any, res: any) {
-  try {
-   const cityHotel = await HotelModel.findById(req.params.location.city);
 
-    res.send({ success: true, cityHotel });
-  }  catch (error) {
-    res.send(error);
+export async function findHotelsByCity(req:any, res:any) {
+  try {
+      // const { city } = req.body
+      const cityHotelDB = await HotelModel.find(req.query)
+      res.send(cityHotelDB)
+  } catch (error) {
+      res.send(error)
   }
 }
+
+
 
 

@@ -139,7 +139,7 @@ input{
     flex-direction: column;
     gap: 10px;
     background: white;
-  }
+    }
   
   .signTitle{
     color: #0071c2;

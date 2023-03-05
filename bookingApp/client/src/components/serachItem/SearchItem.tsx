@@ -3,13 +3,14 @@ import { useNavigate } from "react-router-dom";
 import "../serachItem/SearchItem.css"
 
 
+
 const SearchItem = ({item}:any) => {
     
 const navigate = useNavigate();
     return (
       <div className="searchItem">
         <img
-          src=""
+          src={item.images[0]}
           alt=""
           className="siImg"
         />
@@ -36,7 +37,9 @@ const navigate = useNavigate();
           <div className="siDetailTexts">
             <span className="siPrice">${item.cheapestPrice}</span>
             <span className="siTaxOp">Includes taxes and fees</span>
-            <button onClick={()=> navigate(`./hotels/${item._id}`)} className="siCheckButton">See availability</button>
+            <button onClick={()=> navigate(`/hotels/${item._id}`)} className="siCheckButton">See availability</button>
+            {/* <button onClick={()=> navigate('/hotels/paris')} className="siCheckButton">See availability</button> */}
+
           </div>
         </div>
       </div>

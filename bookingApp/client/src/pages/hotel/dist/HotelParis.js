@@ -7,7 +7,9 @@ var Navbar_1 = require("../../components/navbar/Navbar");
 var react_fontawesome_1 = require("@fortawesome/react-fontawesome");
 var free_solid_svg_icons_1 = require("@fortawesome/free-solid-svg-icons");
 var react_2 = require("react");
+var react_router_dom_1 = require("react-router-dom");
 var HotelParis = function () {
+    var navigate = react_router_dom_1.useNavigate();
     var _a = react_2.useState(0), slideNumber = _a[0], setSlideNumber = _a[1];
     var _b = react_2.useState(false), open = _b[0], setOpen = _b[1];
     var photos = [
@@ -59,7 +61,9 @@ var HotelParis = function () {
                 react_1["default"].createElement("h1", { className: "hotelTitle" }, "Pullman Paris Tour Eiffel"),
                 react_1["default"].createElement("div", { className: "hotelAddress" },
                     react_1["default"].createElement(react_fontawesome_1.FontAwesomeIcon, { icon: free_solid_svg_icons_1.faLocationDot }),
-                    react_1["default"].createElement("span", null, "eiffel tower paris")),
+                    react_1["default"].createElement("span", null,
+                        "eiffel tower paris",
+                        react_1["default"].createElement("button", { onClick: function () { return navigate("/navigation/paris"); }, className: "hotelPriceHighlightBtn" }, "show on google map"))),
                 react_1["default"].createElement("span", { className: "hotelDistance" }, "Excellent location \u2013 500m from center"),
                 react_1["default"].createElement("span", { className: "hotelPriceHighlight" }, "Book a stay over $114 at this property and get a free airport taxi"),
                 react_1["default"].createElement("div", { className: "hotelImages" }, photos.map(function (photo, i) { return (react_1["default"].createElement("div", { className: "hotelImgWrapper", key: i },

@@ -8,9 +8,11 @@ import { format } from 'date-fns';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import "../header/Header.css"
+import axios from "axios";
+import SearchItem from "../serachItem/SearchItem";
 
 
-const Header = () =>{
+const HeaderTest = () =>{
 
     const navigate = useNavigate()
     
@@ -29,6 +31,8 @@ const Header = () =>{
     const [childrenCounter, setChildrenCounter] = useState<number>(0);
     const [roomCounter, setRoomCounter] = useState<number>(1);
     const [openOptions, setOpenOptions] = useState(false);
+    const [filterCity, setFilteredCity] = useState([])
+
 
   function handleDestination(e:any){
     let newDestination = e.target.value
@@ -68,7 +72,28 @@ const Header = () =>{
     setRoomCounter( prevCount => prevCount + 1)
   }
 
+ async function getData(ev:any){
+    ev.preventDefault()
+    try {
+         const city = ev.target.elements.location.city.value;
+         console.log(city)
 
+           //@ts-ignore
+           const { data } = await axios.post("/hotels/getbycity", city);
+           console.log(data);
+           const {ok, error} = data;
+
+           if(ok){
+            <SearchItem/>
+        }
+
+           if(error) {
+            <div>nothing</div>
+        }
+        } catch (error) {
+          console.error(error);
+        }
+      }
 
 
 function handleSearch(){
@@ -177,7 +202,7 @@ try {
             </div>}
             </div>
             <div className="headerSearchItem">
-            <button className="headerBtn" onClick={handleSearch}>Search</button>
+            <button className="headerBtn" onClick={getData}>Search</button>
 
             </div>
         </div>
@@ -186,4 +211,4 @@ try {
     )
 }
 
-export default Header
+export default HeaderTest

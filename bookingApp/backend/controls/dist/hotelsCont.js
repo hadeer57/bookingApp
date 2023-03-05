@@ -120,7 +120,7 @@ function findHotel(req, res) {
                     return [4 /*yield*/, hotelModel_1["default"].findById(req.params.id)];
                 case 1:
                     findHotelDB = _a.sent();
-                    res.send({ success: true, findHotelDB: findHotelDB });
+                    res.send(findHotelDB);
                     return [3 /*break*/, 3];
                 case 2:
                     error_4 = _a.sent();
@@ -156,15 +156,15 @@ function findAllHotels(req, res) {
 exports.findAllHotels = findAllHotels;
 function findHotelsByCity(req, res) {
     return __awaiter(this, void 0, void 0, function () {
-        var cityHotel, error_6;
+        var cityHotelDB, error_6;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    return [4 /*yield*/, hotelModel_1["default"].findById(req.params.location.city)];
+                    return [4 /*yield*/, hotelModel_1["default"].find(req.query)];
                 case 1:
-                    cityHotel = _a.sent();
-                    res.send({ success: true, cityHotel: cityHotel });
+                    cityHotelDB = _a.sent();
+                    res.send(cityHotelDB);
                     return [3 /*break*/, 3];
                 case 2:
                     error_6 = _a.sent();

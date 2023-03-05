@@ -7,13 +7,8 @@ var HeaderHotels_1 = require("../../components/header/HeaderHotels");
 var Navbar_1 = require("../../components/navbar/Navbar");
 require("../list/List.css");
 var react_date_range_1 = require("react-date-range");
+var SearchItem_1 = require("../../components/serachItem/SearchItem");
 var UseFetch_1 = require("../../hooks/UseFetch");
-var SearchItemParis_1 = require("../../components/serachItem/SearchItemParis");
-// const getHotelFromServer = async () => {
-//     const { data } = await axios.get('/hotels')
-//     SearchItem(data)
-//   }
-// const [hotelData, setHotelData] = useState([]);
 var List = function () {
     var navigate = react_router_dom_1.useNavigate();
     var location = react_router_dom_1.useLocation();
@@ -28,7 +23,7 @@ var List = function () {
     var _g = react_1.useState([]), hotels = _g[0], setHotels = _g[1];
     // useEffect(()=>{
     //     (async ()=>{
-    //         const { data } = await axios.post('/hotels', {destination})
+    //         const { data } = await axios.post(`/hotels?city={destination}`)
     //         console.log(data)
     //         const {success, hotels}=data
     //         setHotels(hotels)
@@ -39,7 +34,7 @@ var List = function () {
     //     const destinationFromForm = ev.target.elements.destination.value
     //     setDestination(destinationFromForm)
     //     }
-    var _h = UseFetch_1["default"]("/hotels?city=" + destination), data = _h.data, reFetch = _h.reFetch;
+    var _h = UseFetch_1["default"]("/hotels/getbycity?city=" + destination), data = _h.data, reFetch = _h.reFetch;
     var handleClick = function () {
         reFetch();
     };
@@ -70,7 +65,6 @@ var List = function () {
                                 react_1["default"].createElement("span", { className: "listOptionText" }, "Room"),
                                 react_1["default"].createElement("input", { min: 1, type: "number", className: "listOptionInput", placeholder: roomCounter })))),
                     react_1["default"].createElement("button", { type: "submit" }, "Search")),
-                react_1["default"].createElement("div", { className: "listResult" },
-                    react_1["default"].createElement(SearchItemParis_1["default"], null))))));
+                react_1["default"].createElement("div", { className: "listResult" }, data.map(function (item) { return (react_1["default"].createElement(SearchItem_1["default"], { item: item })); }))))));
 };
 exports["default"] = List;
